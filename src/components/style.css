@@ -1,0 +1,509 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,400;1,700;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+ 
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    }
+
+
+.switch-login{
+    background: #93E9BE;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.switch-login-container{
+    width: calc(30%);
+    margin: 0 auto;
+    min-height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+.switch-login-container .switch-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 ;
+    gap: 2rem;
+    list-style: none;
+}
+
+
+ .switch-btn {
+    border: 1px solid #46B286;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    color: #000;
+    font-size: 1.1rem;
+    align-items: center;
+    border-radius: 4px;
+    letter-spacing: 0.8px;
+    line-height: 24px;
+    min-width: 140px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    /* text-transform: uppercase; */
+}
+
+ .switch-btn.active {
+    border: none;
+    background: #6ACFA6;
+    color: #fff;
+}
+
+
+/* login css file */
+
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message{
+  color: red;
+  font-size: 1rem;
+
+
+}
+
+.form-item {
+    position: relative;
+    height: 3rem;
+  }
+  
+  .form-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #B6F7D5;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+    color: #000;
+    outline: none;
+    padding: 1.25rem;
+    background: none;
+  }
+  
+  .form-input:hover {
+    border-color: #B6F7D5;
+  }
+  
+  .form-input:focus {
+    border-color:   #B6F7D5;
+  }
+  
+  .form-label {
+    position: absolute;
+    left: 1rem;
+    top: 0.8rem;
+    padding: 0 0.5rem;
+    color: #000;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: #fff;
+  }
+  
+  .form-input:focus ~ .form-label,
+  .form-input:not(:placeholder-shown).form-input:not(:focus) ~ .form-label {
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+  }
+
+  .login-container{
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .login-container .title h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+  }
+  
+
+  .login-container .form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .login-container .form-container .submit-btn{
+   width: 100%;
+  }
+
+  .login-container .footer{
+    text-align: end;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .switch-login-container{
+        width: calc(50%);
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    .switch-login-container{
+        width: calc(90%);
+    }
+    
+  }
+
+
+  /* registerpatient css starts here  */
+
+  .register-patient{
+    width: 60%;
+    margin: 4rem auto;
+    min-height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  .register-patient p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+    /* justify-content: center; */
+    
+  }
+
+
+  .register-patient  h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+  }
+
+  .register-patient .form-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    /* flex-direction: column; */
+    
+    gap: 2rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .register-patient .form-container .form-item{
+    width: calc(50% - 1rem);
+  }
+
+
+  .form-item.textarea{
+    height: 120px;  /* Adjust the height as needed */
+    resize: none;
+  }
+
+  .form-item.textarea .form-input{
+    resize: none;
+  }
+
+  .register-patient .form-container .form-item.submit-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;  }
+
+
+
+
+  /* registerpatient css ends here  */
+
+
+  /* appointment list css starts here  */
+
+  .appointment-list{
+    width: 30%;
+    margin: 4rem auto;
+    min-height: 700px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  .appointment-list-container{
+    width: 100%;
+  }
+
+  .appointment-list .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem; 
+    width: 100%;
+  }
+
+  .appointment-list .title h2{
+
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+  }
+  
+  .appointment-list .patient-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .appointment-list .patient-list h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+  }
+
+
+  .appointment-list .patient-list  .patients{
+    display: flex;
+    width: 100%;
+    height: 550px ;
+    overflow-y: scroll;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    gap: 1rem;
+    padding: 0.2rem;
+    /* margin-top: 1rem; */
+  }
+
+  .appointment-list .patient-list  .patients::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .appointment-list .patient-list  .patients .patient{
+    /* width: calc(50% - 1rem); */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    cursor: pointer;
+  }
+
+  .appointment-list .patient-list  .patients .patient .patient-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .appointment-list .patient-list  .patients .patient .patient-title h4{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .appointment-list .patient-list  .patients .patient .patient-title p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+  }
+
+  .appointment-list .patient-list  .patients .patient .patient-title p span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .appointment-list .patient-list  .patients .patient  .content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .appointment-list .patient-list  .patients .patient  .content p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .appointment-list .patient-list  .patients .patient  .content p span{
+
+    font-weight: 500; 
+  }
+
+
+  .patient.selected{
+    background: #6ACFA6;
+    color: #fff;
+    box-shadow: none !important;
+  }
+
+
+
+
+
+
+
+  /* appointment list css ends here  */
+
+
+  /* list of register patients css starts here */
+
+
+  .list-Register{
+    width: 30%;
+    margin: 4rem auto;
+    min-height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+   
+  }
+
+
+  /* list of register patients css ends here */
+
+  /* register-patient */
+
+  .register-patient .patient-details .title h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-top: 1rem;
+    /* text-align: center; */
+    
+  }
+
+  .register-patient .patient-details .title .patient-data{
+    display: flex ;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+  }
+
+  .register-patient .patient-details .title .patient-data p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3c3b3b;
+    display: flex;
+    gap: 1rem;
+    text-transform: capitalize;
+  }
+
+  .register-patient .patient-details .title .patient-data p span{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000;
+    text-transform: capitalize;
+  }
+
+  .register-patient .patient-details .details{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+
+  .register-patient .patient-details .current-details{
+    width: calc(50% - 1rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+
+  .register-patient .patient-details .past-details{
+    width: calc(50% - 1rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid grey
+  }
+
+
+  .register-patient .patient-details .details .details-item p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3c3b3b;
+    display: flex;
+    gap: 1rem;
+    text-transform: capitalize;
+   
+  }
+
+  .register-patient .patient-details .details .details-item p span{
+    color: #000;
+    text-transform: capitalize;
+  }
+
+  .register-patient .doctor-prescription{
+    margin-top: 2.5rem;
+  }
+
+  .register-patient .doctor-prescription form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+  }
+
+  .register-patient .medicine-box{
+    position: relative;
+    height: 80px;
+  }
+
+
+  .register-patient .medicine-box .form-label{
+   position: absolute;
+   top: -10px ;
+   z-index: 1;
+  }
+
+  .register-patient .submit-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+
+  }
+
+  .register-prescription{
+    min-height: 700px;
+  }
+
+  
+
+  /* register-patient */
